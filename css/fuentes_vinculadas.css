@@ -1,0 +1,101 @@
+#cabecera{
+  padding-top:80px;
+  min-height: 200px;
+  background-color: #F8F8F8;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: center;
+}
+
+footer {
+   display: block;
+   min-height: 100px;
+   background:#D5D7DB;
+   text-align:center;
+   padding-top:80px;
+   
+   }
+
+#main {
+   min-height: 800px;
+   padding: 0px;
+   display: -webkit-flex;
+   display:         flex;
+   -webkit-flex-flow: column;
+           flex-flow: column;
+   }
+ 
+
+#main > article {
+   padding: 20px;
+   background-color: #F8F8F8;
+   -webkit-flex: 3 1 60%;
+           flex: 3 1 60%;
+   -webkit-order: 2;
+           order: 2;
+   margin:0 auto;
+   width:1000px;
+   background-color: #565656;
+   }
+
+@font-face{
+font-family: 'fira';
+src: url('../fuentes/FiraSansOT-Light.otf');
+}
+
+.sect-art-1{
+background-color:#D5D7DB;	
+padding:10px;
+padding-left:30px;
+padding-right:20px;
+font-family: fira;
+font-size:24px;
+text-align:center;
+}
+
+
+body{
+  background-color: #565656;
+  font: 14px/1.3 Arial,sans-serif;
+  margin:0;
+}
+
+nav{background-color:#29A8E0}
+
+nav ul{
+ list-style-type:none;
+ padding:0px;
+ display:flex;
+ flex-direction:row;
+ flex-wrap:wrap;
+ margin:0 auto; 
+ width:1000px;
+ margin-bottom:10px;
+ margin-top:10px;
+}
+
+
+li{ flex-grow: 1;}
+
+a{
+  display:block;
+  padding:1em;
+  background-color:#D5D7DB;
+  text-align:center;
+  margin-right:0.2em;
+  text-decoration:none;
+  color:#000000;
+}
+
+a:hover{
+ background-color:#ff4c04; 
+  
+}
+
+
+
+
