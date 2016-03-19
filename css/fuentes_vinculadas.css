@@ -30,16 +30,13 @@ footer {
    }
  
 
-#main > article {
-   padding: 20px;
-   background-color: #F8F8F8;
-   -webkit-flex: 3 1 60%;
-           flex: 3 1 60%;
-   -webkit-order: 2;
-           order: 2;
-   margin:0 auto;
-   width:1000px;
-   background-color: #565656;
+.articulo {
+  display: flex;
+   }
+   
+   .background{
+    margin: 0 auto;
+	width:1000px;
    }
 
 @font-face{
@@ -48,13 +45,16 @@ src: url('../fuentes/FiraSansOT-Light.otf');
 }
 
 .sect-art-1{
+margin:10px;
 background-color:#D5D7DB;	
 padding:10px;
-padding-left:30px;
-padding-right:20px;
 font-family: fira;
 font-size:24px;
 text-align:center;
+}
+
+.sect-art-1 p {
+text-align:justify;	
 }
 
 
@@ -64,22 +64,31 @@ body{
   margin:0;
 }
 
-nav{background-color:#29A8E0}
+.nav{
+	display:flex;
+	background-color:#29A8E0;
+}
 
-nav ul{
- list-style-type:none;
- padding:0px;
- display:flex;
- flex-direction:row;
- flex-wrap:wrap;
- margin:0 auto; 
- width:1000px;
- margin-bottom:10px;
- margin-top:10px;
+.main{
+   margin: 0 auto;
+   width: 1000px;
 }
 
 
-li{ flex-grow: 1;}
+ ul{
+ list-style-type:none;
+ display:flex;
+ flex-direction:row;
+ flex-wrap:wrap;
+ padding:0px;
+ margin-bottom:2px;
+ margin-top:2px;
+}
+
+li{ 
+flex-grow: 1;
+margin-top: 1px;
+}
 
 a{
   display:block;
@@ -90,6 +99,7 @@ a{
   text-decoration:none;
   color:#000000;
 }
+
 
 a:hover{
  background-color:#ff4c04; 
