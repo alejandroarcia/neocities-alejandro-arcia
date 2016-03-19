@@ -30,16 +30,24 @@ footer {
            flex-flow: column;
    }
  
-#main > article {
-   padding: 20px;
-   background-color: #565656;
-   -webkit-flex: 3 1 60%;
-           flex: 3 1 60%;
-   -webkit-order: 2;
-           order: 2;
-  margin:0 auto;
-  
+   .articulo{
+   display:flex;
+   padding-top:10px;
+   padding-bottom:10px;
    }
+   
+   .imagenes{
+	margin: 0 auto;
+	background-color: #565656;
+   }
+   
+   picture {
+  min-height:800px;
+  margin-left:10px;
+  margin-right:10px;
+
+}
+    
    
   #video{
   display: flex;
@@ -58,15 +66,7 @@ footer {
  
  }
 
-.imagenes > picture{
-  display: flex;
-  flex-wrap:wrap;
-  background-color: #565656;
-  flex-direction:column;
-  align-items:center;
 
-}
-    
 #svg{
 	display: flex;
 	flex-wrap:wrap;
@@ -98,13 +98,13 @@ body{
  flex-direction:row;
  flex-wrap:wrap;
  padding:0px;
- margin-bottom:10px;
- margin-top:10px;
+ margin-bottom:2px;
+ margin-top:2px;
 }
 
 li{ 
 flex-grow: 1;
-margin-top: 3px;
+margin-top: 1px;
 }
 
 a{
