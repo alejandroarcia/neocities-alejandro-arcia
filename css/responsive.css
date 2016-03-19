@@ -43,23 +43,36 @@ footer {
    
   #video{
   display: flex;
+  flex-wrap: wrap;
   flex-direction:column;
-  background-color:#000000;
+  background-color: Grey;
   align-items:center;
-  min-width: 300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
  }
+
  
- .vertical{
-	 display:flex;
-	 flex-wrap:wrap;
+#video .horizontal {
+ width:560px;
+ height:400px;
+ 
  }
+
+.imagenes > picture{
+  display: flex;
+  flex-wrap:wrap;
+  background-color: #565656;
+  flex-direction:column;
+  align-items:center;
+
+}
     
-#main > article >img{
-	display:flex;
+#svg{
+	display: flex;
 	flex-wrap:wrap;
+  background-color: Grey;
 	flex-direction:column;
-	min-height:300px;
-	width: 400px;
+  align-items:center;
 }
 
 body{
