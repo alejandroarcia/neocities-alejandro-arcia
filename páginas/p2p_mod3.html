@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Secciones y líneas generales de un documento HTML5</title>
+    <link rel="stylesheet" type="text/css" href="../css/p2p_mod3.css">
+  </head>
+  <body>
+  <header id="cabecera">
+  </header>
+  <div id="main">
+  <div class="nav">
+      <nav class="main">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="mi_primera_pagina_web.html">Mi Primera Página Web</a></li>
+          <li><a href="arbol.html">Árbol html</a></li>
+          <li><a href="prioridad.html">Prioridad CSS</a></li>
+          <li><a href="p2p_Obligatoria.html">P2P Obligatoria</a></li>
+          <li><a href="fuentes_vinculadas.html">Fuentes Vinculadas</a></li>
+          <li><a href="personal.html">Personal</a></li>
+          <li><a href="p2p_mod3.html">P2P_mod3</a></li>
+          </ul>
+      </nav>
+      </div>
+   <div class="articulo">
+  <div class="background">
+  <article>
+  <section class="sect-art-1">
+	<h1 id="h1"></h1>
+  <p>Alejandor Arcia</p>
+  <h2 id="h2">La fecha y la hora son:</h2>
+  <div id="fecha"></div>
+  
+  <div>
+  <h3>a) Contenido de innerHTML de elemento identificado por id="h2"</h3>  
+  <p id="parte_a"></p>
+
+  <h3>b) Contenido de outerHTML de elemento identificado por id="h1"</h3>
+  <p id="parte_b"></p>
+
+  <h3>c) Contenido de la propiedad global: location.href</h3>
+  <p id="parte_c"></p>
+
+  <h3>d) Contenido de la propiedad global: location</h3>
+  <p id="parte_d"></p>
+
+  <h3>e) Contenido de las propiedades globales: screen.width y screen.heigth</h3>
+  <p id="parte_e"></p>
+  </div>
+  
+ <script type="text/javascript">
+  var fecha = new Date();
+  var msj;
+  var ancho = "Total Width: " + screen.width;
+  var alto = "Total Heigth: " + screen.heigth;
+  var h2 = document.getElementById("h2");
+  var h1 = document.getElementById("h1");
+
+  if      (fecha.getHours() < 7)  { msj = "Buenas noches";}
+  else if (fecha.getHours() < 12) { msj = "Buenos días";}
+  else if (fecha.getHours() < 21) { msj = "Buenas tardes";}
+  else                                          { msj = "Buenas noches";}
+
+  document.getElementById("h1").innerHTML    = msj;
+  document.getElementById("fecha").innerHTML = fecha;
+  document.getElementById("parte_a").innerHTML = h2.innerHTML;
+  document.getElementById("parte_b").innerHTML = h1.outerHTML.replace(/</g, "&lt;");
+  document.getElementById("parte_c").innerHTML = location.href;
+  document.getElementById("parte_d").innerHTML = location;
+  document.getElementById("parte_e").innerHTML = ancho + "<br>" + alto;
+</script>
+
+</section>
+  </article>
+  </div>
+  </div>
+  </div>
+  <footer>&#169; 2016 por Alejandro Arcia </footer>
+  </body>
+</html>
+
+
