@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Secciones y líneas generales de un documento HTML5</title>
+    <link rel="stylesheet" type="text/css" href="../css/p2p_mod4.css">
+    
+    <script type="text/javascript">
+  var num, acc = 0, op = "";
+  var alerta = false;
+  
+
+  function mas()   { acc = num.value;  op = "+"; }
+  function menos() { acc = num.value;  op = "-"; }
+  function div()   { acc = num.value;  op = "/"; }
+  function mult()   { acc = num.value;  op = "*"; }
+  function cuadrado() { acc = num.value;  op = "x<sup>2"; }
+  function inverso() {acc = num.value; op = "1/x"; }
+  function raiz() {acc = num.value; op = "&radic;"; }
+  function entero() {acc = num.value; op = "Int"; }
+  function elevar() {acc = num.value; op = "x<sup>y"; }
+
+  function calcular() {
+
+    if(isNaN(acc) || isNaN(num.value))  {alert('ERROR: El dato ingresado no es un número'); alerta = true;}
+    if (alerta === true) {num.value = "", acc = 0, op = "", alerta = false;}
+    if (op === "+") {num.value = (+acc + +num.value)}
+    if (op === "-") {num.value = (+acc - +num.value)}
+    if (op === "/") {if(num.value === 0) { alert('ERROR: No se puede dividir entre cero'); num.value = ""; } else {num.value = (+acc / num.value) }}
+    if (op === "*") {num.value = (+acc * num.value)}
+    if (op === "x<sup>2") {num.value = Math.pow(acc,2)}
+    if (op === "1/x") {if((acc === "0") || (acc === "")) { alert('ERROR: No se puede dividir entre cero'); } else {num.value = (1/acc)}}
+    if (op === "&radic;") {num.value = (Math.sqrt(acc))}
+    if (op === "Int") { num.value =(acc >= 0 )? Math.floor(acc) : Math.ceil(acc); }
+    if (op === "x<sup>y") {num.value = Math.pow(acc, num.value)}
+
+}
+
+  function inic ()   {num = document.getElementById("num");}
+  function vaciar () {num.value = "";}  
+
+</script>
+  </head>
+  <body onload="inic()">
+  <header id="cabecera">
+  </header>
+  <div id="main">
+  <div class="nav">
+      <nav class="main">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="mi_primera_pagina_web.html">Mi Primera Página Web</a></li>
+          <li><a href="arbol.html">Árbol html</a></li>
+          <li><a href="prioridad.html">Prioridad CSS</a></li>
+          <li><a href="p2p_Obligatoria.html">P2P Obligatoria</a></li>
+          <li><a href="fuentes_vinculadas.html">Fuentes Vinculadas</a></li>
+          <li><a href="personal.html">Personal</a></li>
+          <li><a href="p2p_mod3.html">P2P_mod3</a></li>
+          <li><a href="p2p_mod4.html">P2P_mod4</a></li>
+          </ul>
+      </nav>
+      </div>
+   <div class="articulo">
+  <div class="background">
+  <article>
+  <section class="sect-art-1">
+	<div class="calc" >
+<h1 id="tiempo"></h1>
+<h1>“Bienvenido a la calculadora de Alejandro Arcia”</h1>
+<div id="cont">
+  Calculadora<p id="p_calc">
+  <input type="text" id="num" placeholder="Text here" onClick="vaciar()"></input></p>
+  <p id="p_calc">
+  <button  onclick="cuadrado()">x<sup>2</sup></button>
+  <button  onclick="inverso()">1/x</button>
+  <button  onclick="raiz()">&radic;</button><br>
+  <button  onclick="elevar()">x<sup>y</sup></button>
+  <button  onClick="entero()">Int</button>
+  <button  onClick="div()">/</button><br>
+  <button  onClick="menos()">-</button>
+  <button  onClick="mas()">+</button>
+  <button  onClick="mult()">*</button><br>
+  <button  id="igual" onClick="calcular()">=</button>
+  </p>
+  </div>
+  </div>
+<script type="text/javascript">
+  var msj;
+  var fecha = new Date();
+  if      (fecha.getHours() < 7)  { msj = "Buenas noches";}
+  else if (fecha.getHours() < 12) { msj = "Buenos prueba";}
+  else if (fecha.getHours() < 21) { msj = "Buenas tardes";}
+  else                            { msj = "Buenas noches";}
+  document.getElementById("tiempo").innerHTML = msj;
+</script>
+</section>
+  </article>
+  </div>
+  </div>
+  </div>
+  <footer>&#169; 2016 por Alejandro Arcia </footer>
+  </body>
+</html>
+
+
